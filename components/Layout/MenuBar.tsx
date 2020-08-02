@@ -55,7 +55,7 @@ const MenuBar: NextPage<Props> = ({}) => {
         <a
           href="#"
           className="text-white p-2 rounded-full 
-        hover:text-gray-200 hover:bg-orange-400 cursor-pointer mr-4 hidden"
+        hover:text-gray-200 hover:bg-blue-600 cursor-pointer mr-4"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -75,23 +75,12 @@ const MenuBar: NextPage<Props> = ({}) => {
         </a>
 
         <div className="relative">
-          {/* <div
-            onClick={e => setIsCartOpen(!isCartOpen)}
-            className="cursor-pointer text-white font-bold w-10 h-10 flex items-center justify-center rounded-full"
+          <div
+            className="cursor-pointer font-bold w-10 h-10 bg-blue-600 
+            text-white flex items-center justify-center rounded-full border-2 border-white"
           >
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div> */}
+            AJ
+          </div>
 
           {isDropDownOpen ? (
             <div
