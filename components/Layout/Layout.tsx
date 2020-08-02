@@ -4,15 +4,12 @@ import React, { useState, useEffect, useContext } from "react"
 
 import MenuBar from "./MenuBar"
 import Footer from "./Footer"
-import Cart from "../Cart/Cart"
-import CartContext from "../Cart/CartContext"
 
 interface Props {
   children: any
 }
 
 const Layout: NextPage<Props> = ({ children }) => {
-  const { isCartOpen, setIsCartOpen } = useContext(CartContext)
   return (
     <>
       <Head>
@@ -24,13 +21,13 @@ const Layout: NextPage<Props> = ({ children }) => {
         <meta name="theme-color" content="#556cd6" />
         <link
           rel="icon"
-          href="https://cdn.shopify.com/assets/images/logos/shopify-bag.png"
+          href="https://nextjs.org/static/favicon/favicon-32x32.png"
         />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
-        <title>Next Shopify Storefront</title>
+        <title>Next.js TailwindCSS Starter</title>
         <meta
           name="description"
           content="A Shopping Cart built with TypeScript, NextJS, React, Apollo Client, Shopify Storefront GraphQL API, and TailwindCSS."
@@ -45,7 +42,6 @@ const Layout: NextPage<Props> = ({ children }) => {
             <br />
             <br />
             {children}
-            <Cart />
             <Footer />
           </div>
         </div>
