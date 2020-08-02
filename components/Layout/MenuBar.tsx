@@ -78,15 +78,16 @@ const MenuBar: NextPage<Props> = ({}) => {
           <div
             className="cursor-pointer font-bold w-10 h-10 bg-blue-600 
             text-white flex items-center justify-center rounded-full border-2 border-white"
+            onClick={() => setIsDropDownOpen(true)}
           >
             AJ
           </div>
 
           {isDropDownOpen ? (
             <div
-              // ref={node}
+              ref={node}
               className="absolute top-0 mt-12 right-0 w-64 
-              bg-white py-2 shadow-md border border-gray-100 rounded z-40 text-sm"
+              bg-white py-2 shadow-md border border-gray-100 rounded z-40 text-base"
             >
               <a
                 href="#"
