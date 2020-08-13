@@ -1,4 +1,4 @@
-# Next Shopify Storefront
+# Next.js & TailwindCSS Starter
 
 A super simple boilerplate for your Next.js web app built with TypeScript, NextJS, React, and TailwindCSS.
 
