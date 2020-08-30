@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@tailwindcss/ui": "^0.5.0",
     "@types/detect-node": "^2.0.0",
     "autoprefixer": "^9.8.5",
     "dayjs": "^1.8.30",
@@ -33,7 +34,7 @@
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tailwindcss": "^1.5.2",
+    "tailwindcss": "^1.7.6",
     "tailwindcss-spinner": "^1.2.0"
   },
   "devDependencies": {
