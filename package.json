@@ -30,7 +30,7 @@
     "dotenv": "^10.0.0",
     "dotenv-webpack": "^7.0.3",
     "express": "^4.17.1",
-    "next": "^11.1.3",
+    "next": "^12.1.0",
     "postcss": "^8.4.5",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
