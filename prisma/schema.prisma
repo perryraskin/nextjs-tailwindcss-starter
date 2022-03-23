@@ -2,11 +2,44 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
+}
+
+model User {
+  id          Int       @id @default(autoincrement())
+  dateCreated DateTime  @default(now())
+  issuer      String    @unique
+  firstName   String
+  lastName    String
+  email       String?
+  imageUrl    String?
+  Customer    Customer?
+}
+
+model Customer {
+  id               Int       @id @default(autoincrement())
+  dateCreated      DateTime  @default(now())
+  userId           Int?      @unique
+  User             User?     @relation(fields: [userId], references: [id])
+  stripeCustomerId String
+  Payments         Payment[]
+}
+
+model Payment {
+  id              Int       @id @default(autoincrement())
+  dateCreated     DateTime  @default(now())
+  customerId      Int?
+  Customer        Customer? @relation(fields: [customerId], references: [id])
+  stripeSessionId String?
+  subtotal        Decimal   @default(0) @db.Decimal(10, 2)
+  total           Decimal   @default(0) @db.Decimal(10, 2)
+  mode            String?
+  status          String?
+  currency        String?
 }
